@@ -1,11 +1,8 @@
 package home;
 
 import common.CommonAPI;
-import common.CommonAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import java.util.ArrayList;
 
 public class HomePage extends CommonAPI {
     @FindBy(id = "email")

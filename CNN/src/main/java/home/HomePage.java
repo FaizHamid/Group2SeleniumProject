@@ -2,8 +2,6 @@ package home;
 
 import common.CommonAPI;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 
 public class HomePage extends CommonAPI {
 

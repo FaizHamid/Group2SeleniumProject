@@ -13,7 +13,7 @@
 
     <test name = "ParaBank Home">
         <classes>
-<!--            <class name="home.HomePageTest"/>-->
+<!--            <class name="home.TestMacysHomePage"/>-->
 <!--            <class name="home.SignUpTest"/>-->
             <class name="home.LoginPageTest"/>
         </classes>

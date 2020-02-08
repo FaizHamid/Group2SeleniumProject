@@ -13,7 +13,7 @@
 
     <test name = "Facebook Home">
         <classes>
-            <class name="home.HomePageTest"/>
+            <class name="home.TestMacysHomePage"/>
         </classes>
     </test>
 </suite>
