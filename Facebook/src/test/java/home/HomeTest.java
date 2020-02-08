@@ -1,7 +1,6 @@
 package home;
 
 import common.CommonAPI;
-import common.CommonAPI;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 

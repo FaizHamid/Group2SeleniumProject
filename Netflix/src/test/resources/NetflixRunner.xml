@@ -13,7 +13,7 @@
 
     <test name = "Netflix Home">
         <classes>
-            <class name="home.HomePageTest"/>
+            <class name="home.HomeTest"/>
         </classes>
     </test>
 </suite>
