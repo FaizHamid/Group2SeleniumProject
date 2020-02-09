@@ -18,8 +18,12 @@ public class MacysHomePage extends CommonAPI {
     WebElement dealsLink;
     @FindBy(linkText = "Lists")
     WebElement listsLink;
+    @FindBy(linkText = "Gifts")
+    WebElement giftsLink;
     @FindBy(xpath = "//*[@title='Wedding Registry']")
     WebElement weddingRegistry;
+    @FindBy(id = "shopByDepartmentLabelText")
+    WebElement dropDownMenu;
 
     public void navigateToMacys() {
         driver.get("https://www.macys.com");
@@ -31,7 +35,7 @@ public class MacysHomePage extends CommonAPI {
         searchSubmitBtn.click();
     }
 
-    public void clickingOnDropdown() {
+    public void clickingOnShopByDepartment() {
         shopByDepartment.click();
     }
 
@@ -47,12 +51,16 @@ public class MacysHomePage extends CommonAPI {
     public void clickOnDeals() {
         dealsLink.click();
     }
-
     public void clickOnLists() {
         listsLink.click();
     }
-
     public void clickOnWeddingRegistry() {
         weddingRegistry.click();
+    }
+    public void searchNClick() {
+    }
+    public void dropDownMenu() {
+    }
+    public void listsLink() {
     }
 }

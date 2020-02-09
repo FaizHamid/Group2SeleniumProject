@@ -8,7 +8,7 @@
     <parameter name="os" value="Windows"/>
     <parameter name="os_version" value="10"/>
     <parameter name="browserName" value="chrome"/>
-    <parameter name="browserVersion" value="75.0"/>
+    <parameter name="browserVersion" value="79.0"/>
     <parameter name="url" value="https://www.netflix.com/browse"/>
 
     <test name = "Netflix Home">

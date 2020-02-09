@@ -1,58 +1,84 @@
 package home;
 
 import common.CommonAPI;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class TestMacysHomePage extends CommonAPI {
-    //write test cases
-    @Test(priority = 1)
+    @Test
+    public void getHomePageTitle(){
+        MacysHomePage macysHomePage = PageFactory.initElements(driver, MacysHomePage.class);
+        macysHomePage.navigateToMacys();
+        String macysHomePageTitle = driver.getTitle();
+        System.out.println("Title is "+ macysHomePageTitle);
+    }
+
+    @Test
+    public void startWebDriver(){
+        MacysHomePage macysHomePage = PageFactory.initElements(driver, MacysHomePage.class);
+        macysHomePage.navigateToMacys();
+        Assert.assertEquals("Shop Fashion Clothing & Accessories", "Shop Fashion Clothing & Accessories");
+    }
+
+    @Test
     public void testUserCanUseSearchBox() throws InterruptedException {
         MacysHomePage searchPage = PageFactory.initElements(driver, MacysHomePage.class);
         searchPage.searchNClick("Boots");
     }
 
     @Test
-    public void testUserCanClickOnDropdownMenu() {
+    public void testUserCanClickOnDropDownMenu() {
         MacysHomePage shopByDepartment = PageFactory.initElements(driver, MacysHomePage.class);
-        shopByDepartment.clickingOnDropdown();
+        shopByDepartment.dropDownMenu();
     }
 
     @Test
     public void testUserCanNavigateToStores() {
         MacysHomePage storesLink = PageFactory.initElements(driver, MacysHomePage.class);
-        storesLink.clickOnStores();
+        storesLink.listsLink();
     }
 
     @Test
     public void testUserCanNavigateToDeals() {
         MacysHomePage dealsLink = PageFactory.initElements(driver, MacysHomePage.class);
-        dealsLink.clickOnDeals();
+        dealsLink.listsLink();
     }
+
     @Test
     public void testUserCanNavigateToLists() {
-        MacysHomePage listsLink = PageFactory.initElements(driver, MacysHomePage.class);
-        listsLink.clickOnLists();
+        MacysHomePage listLink = PageFactory.initElements(driver, MacysHomePage.class);
+        listLink.listsLink();
     }
+
+    @Test
+    public void testUserCanNavigateToGifts() {
+        MacysHomePage giftsLink = PageFactory.initElements(driver, MacysHomePage.class);
+        giftsLink.listsLink();
+    }
+
     @Test
     public void testUserCanNavigateToWeddingRegistry() {
         MacysHomePage weddingRegistry = PageFactory.initElements(driver, MacysHomePage.class);
-        weddingRegistry.clickOnWeddingRegistry();
+        weddingRegistry.listsLink();
     }
 
-
-//        @Test
-//        public void testSearchMultipleItems () {
-//            MacysHomePage hp = PageFactory.initElements(driver, MacysHomePage.class);
-//            hp.navigateToMacys();
-//            List<String> items = new ArrayList<>();
-//            items.add("perfume");
-//            items.add("cosmetics");
-//            items.add("Wedding dresses");
-//            items.add("shoes");
-//
-//
-//        }
+    @Test
+    public void testSearchMultipleItems() {
+        MacysHomePage macysHomePage = PageFactory.initElements(driver, MacysHomePage.class);
+        macysHomePage.navigateToMacys();
+        List<String> items = new ArrayList<>();
+        items.add("perfume");
+        items.add("cosmetics");
+        items.add("dresses");
+        items.add("shoes");
+        MacysHomePage searchPage = PageFactory.initElements(driver, MacysHomePage.class);
+        searchPage.searchNClick();
+    }
 
 }
