@@ -14,8 +14,8 @@
     <test name = "Macys Home">
         <classes>
             <class name="home.TestMacysHomePage"/>
-            <class name="home.TestMacysLogIn"/>
-            <class name="home.search.SearchTest"/>
+<!--            <class name="home.TestMacysLogIn"/>-->
+<!--            <class name="home.search.SearchTest"/>-->
         </classes>
     </test>
 </suite>
