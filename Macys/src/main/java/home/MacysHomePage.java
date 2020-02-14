@@ -10,6 +10,8 @@ public class MacysHomePage extends CommonAPI {
     WebElement searchBox;
     @FindBy(id = "searchSubmit")
     WebElement searchSubmitBtn;
+    @FindBy(css = "span[class='#logo > a > svg']")
+    WebElement macysLogo;
     @FindBy(id = "unselectedMenuButton")
     WebElement shopByDepartment;
     @FindBy(linkText = "Stores")
@@ -24,6 +26,12 @@ public class MacysHomePage extends CommonAPI {
     WebElement weddingRegistry;
     @FindBy(id = "shopByDepartmentLabelText")
     WebElement dropDownMenu;
+    @FindBy(id = "bagCount")
+    WebElement shoppingBagBtn;
+    @FindBy(id = "nav-link-accountList")
+    WebElement signInBtn;
+
+
 
     public void navigateToMacys() {
         driver.get("https://www.macys.com");
@@ -31,7 +39,7 @@ public class MacysHomePage extends CommonAPI {
 
     public void searchNClick(String itemName) {
         this.navigateToMacys();
-        searchBox.sendKeys(itemName);
+        searchSubmitBtn.sendKeys(itemName);
         searchSubmitBtn.click();
     }
 
@@ -62,5 +70,20 @@ public class MacysHomePage extends CommonAPI {
     public void dropDownMenu() {
     }
     public void listsLink() {
+    }
+
+    public void clickOnMacysLogo() {
+    }
+
+    public void searchSubmitBtn(String boots) {
+    }
+
+    public void checkShoppingBag() {
+    }
+
+    public void goToSignIn() {
+    }
+
+    public void selectCreateAListFromMouseHover() {
     }
 }

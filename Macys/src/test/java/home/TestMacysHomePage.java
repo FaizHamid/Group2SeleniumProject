@@ -1,7 +1,9 @@
 package home;
 
 import common.CommonAPI;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -26,9 +28,15 @@ public class TestMacysHomePage extends CommonAPI {
     }
 
     @Test
+    public void testUserCanClickOnMacysLogo() {
+        MacysHomePage macysHomePage = PageFactory.initElements(driver, MacysHomePage.class);
+        macysHomePage.clickOnMacysLogo();
+    }
+
+    @Test
     public void testUserCanUseSearchBox() throws InterruptedException {
         MacysHomePage searchPage = PageFactory.initElements(driver, MacysHomePage.class);
-        searchPage.searchNClick("Boots");
+        searchPage.searchSubmitBtn("Boots");
     }
 
     @Test
@@ -79,5 +87,11 @@ public class TestMacysHomePage extends CommonAPI {
         MacysHomePage searchPage = PageFactory.initElements(driver, MacysHomePage.class);
         searchPage.searchNClick();
     }
+    @Test
+    public void testUserCanUseDropdownSortBy() throws Exception {
+        MacysHomePage dropDownSortBy = PageFactory.initElements(driver, MacysHomePage.class);
+        dropDownSortBy.selectCreateAListFromMouseHover();
+    }
+
 
 }
