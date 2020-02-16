@@ -17,9 +17,9 @@ public class Features extends CommonAPI {
             case "navigate":
                 mhp.navigateToMacys();
                 break;
-//            case "deals":
-//                mhp.clickOnDeals();
-//                break;
+            case "deals":
+                mhp.clickOnDeals();
+                break;
             case "list":
                 mhp.clickOnLists();
                 break;

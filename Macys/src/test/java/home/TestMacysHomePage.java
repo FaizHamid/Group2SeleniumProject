@@ -93,5 +93,4 @@ public class TestMacysHomePage extends CommonAPI {
         dropDownSortBy.selectCreateAListFromMouseHover();
     }
 
-
 }

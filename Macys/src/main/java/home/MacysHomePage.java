@@ -32,7 +32,6 @@ public class MacysHomePage extends CommonAPI {
     WebElement signInBtn;
 
 
-
     public void navigateToMacys() {
         driver.get("https://www.macys.com");
     }
@@ -86,4 +85,9 @@ public class MacysHomePage extends CommonAPI {
 
     public void selectCreateAListFromMouseHover() {
     }
+    public void helpNFacBtn() {
+    }
+
+
+
 }
